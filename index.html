@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Minchan Wordle</title>
+    <link rel="stylesheet" href="style.css" /> 
+</head>
+
+<body>
+    <div id="app">
+        <header>
+            <h1>MIN WORDLE</h1>
+        </header>
+
+        <div id="status">You have 6 tries to guess the word.</div> 
+        
+        <main id="interface">
+            <div id="board"></div> 
+
+            <div id="columns">
+                <div id="vowels-column" class="key-group">
+                    <h3>VOWELS</h3>
+                    <div id="vowels" class="key-container"></div>
+                </div>
+
+                <div id="consonants-column" class="key-group">
+                    <h3>CONSONANTS</h3>
+                    <div id="consonants" class="key-container"></div>
+                </div>
+            </div>
+
+            <div id="controls">
+                <button id="restart-btn">Replay</button>
+                <button id="show-btn">Show Answer</button>
+            </div>
+        </main>
+    </div>
+    
+    <script src="main.js"></script> 
+</body>
+</html>

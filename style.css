@@ -1,0 +1,199 @@
+/* Tổng thể */
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: linear-gradient(135deg, #cbcbff);
+    color: #250284;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Tiêu đề */
+  .title {
+    margin: 5px 0;
+    font-size: 2.2rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #e4863d;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.15);
+  }
+  
+  #board {
+    display: grid;
+    grid-template-rows: repeat(6, 60px);     
+    grid-template-columns: repeat(5, 60px);  
+    gap: 10px;                                
+    justify-content: right;     
+    margin-right: 500px;           
+    margin-top: 50px;
+  }
+
+  #controls {
+    margin: 10px 0;
+    margin-top: 0px;
+    display: flex;
+    justify-content: center;
+    gap: 55px; /* khoảng cách giữa nút */
+  }
+  
+  #controls button {
+    padding: 12px 24px;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.2s ease;
+    width: 220px;      
+    height: 55px; 
+  }
+  
+  #restart-btn {
+    background-color: #250284; 
+    color: white;
+  }
+  
+  #show-btn {
+    background-color: #250284; 
+    color: white;
+  }
+  
+  #controls button:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+  }
+  #status {
+    margin: 10px 0;       
+    font-size: 20px;
+    font-weight: bold;
+    color: #250284;
+  }
+  
+  /* Ô chữ */
+  .tile {
+    width: 65px;
+    height: 65px;
+    border: 2px solid #bbb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color: #ffffff;
+    color: #333;
+    border-radius: 6px;
+    transition: background-color 0.3s, transform 0.15s;
+  }
+  
+  .tile.correct {
+    background-color: #6aaa64; /* xanh lá */
+    color: #fff;
+  }
+  
+  .tile.present {
+    background-color: #c9b458; /* vàng */
+    color: #fff;
+  }
+  
+  .tile.absent {
+    background-color: #787c7e; /* xám */
+    color: #fff;
+  }
+  
+  .tile:active {
+    transform: scale(0.95);
+  }
+
+  
+#columns {
+    display: flex;
+    top:150px;
+    justify-content: absolute; 
+    gap: 50px; 
+    flex-wrap: wrap; 
+    margin: 50px auto;
+    max-width: 800px; 
+}
+#vowels-column {
+  position: absolute;
+  left: 30%;        
+  top: 180px;     
+}
+
+#consonants-column {
+  position: absolute;
+  left: 30%;       
+  top: 315px;
+}
+
+#vowels-column, #consonants-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    background-color: #f1f1f1; 
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    font-weight: bold;
+    color: #250284;
+    width: 280px;          
+    max-width: 300px;
+    min-width: 200px;
+}
+  .key-group {
+    flex: 1 1 200px;   /* mỗi khối chiếm tối thiểu 200px, tự co giãn */
+    background: #f8f8ff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    text-align: center;
+  }
+
+#vowels-column h3, #consonants-column h3 {
+    margin: 5px 0 15px 0;
+    font-size: 1.2rem;
+    color: #250284;
+}
+
+#vowels, #consonants {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center;
+    gap: 8px; 
+    width: 100%;
+}
+
+.letter {
+    width: 40px;
+    height: 55px;
+    border-radius: 6px;
+    background-color: #d3d6da;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.2s;
+  }
+  
+  .letter.absent {
+    background-color: #787c7e;
+    color: white;
+  }
+  .letter-tile {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    margin: 2px;
+    border: 1px solid #323232;
+    text-align: center;
+    line-height: 30px;
+    font-weight: bold;
+    border-radius: 5px;
+    background-color: white;
+    color: black;
+    transition: 0.3s;
+  }
+  
